@@ -46,9 +46,7 @@ func (b *cmdBump) New() *cobra.Command {
 	}
 
 	cmd.Flags().StringVarP(&b.gitDir, "git-dir", "g", ".", "repository root (the .git directory)")
-	cmd.MarkFlagRequired("git-dir")
 	cmd.Flags().StringVarP(&b.modDir, "gomod-dir", "m", ".", "go module root (the go.mod file)")
-	cmd.MarkFlagRequired("gomod-dir")
 	cmd.Flags().BoolVarP(&b.push, "push", "p", false, "push tags")
 
 	cmd.Flags().BoolVarP(&b.major, "major", "", false, "increment major version")
